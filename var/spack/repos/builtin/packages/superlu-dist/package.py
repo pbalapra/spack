@@ -60,6 +60,9 @@ class SuperluDist(Package):
     depends_on('parmetis')
     depends_on('metis@5:')
 
+    patch('superlu_dist_cxx_build.patch', when='@develop')
+    patch('superlu_dist_omp_build.patch', when='@develop')
+
     def install(self, spec, prefix):
         lapack_blas = spec['lapack'].libs + spec['blas'].libs
         makefile_inc = []
@@ -77,6 +80,11 @@ class SuperluDist(Package):
             'ARCH         = ar',
             'ARCHFLAGS    = cr',
             'RANLIB       = true',
+            'CXX          = {0}'.format(self.spec['mpi'].mpicxx),
+            'CXXFLAGS     = {0} {1} {2}'.format(
+                ' '.join(self.spec.compiler_flags['cxxflags']),
+                self.compiler.pic_flag,
+                self.compiler.cxx11_flag),
             'CC           = {0}'.format(self.spec['mpi'].mpicc),
             'CFLAGS       = %s %s -O2 %s %s %s' % (
                 self.compiler.pic_flag,
