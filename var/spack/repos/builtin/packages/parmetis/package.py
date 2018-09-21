@@ -61,7 +61,7 @@ class Parmetis(CMakePackage):
         return (None, None, flags)
 
     def url_for_version(self, version):
-        url = 'http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis'
+        url = 'http://ftp.mcs.anl.gov/pub/petsc/spack-pkgs'
         if version < Version('3.2.0'):
             url += '/OLD'
         url += '/parmetis-{0}.tar.gz'.format(version)

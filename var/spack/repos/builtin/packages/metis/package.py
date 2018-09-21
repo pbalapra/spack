@@ -69,7 +69,7 @@ class Metis(Package):
     patch('install_gklib_defs_rename.patch', when='@5:')
 
     def url_for_version(self, version):
-        url = "http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis"
+        url = "http://ftp.mcs.anl.gov/pub/petsc/spack-pkgs"
         if version < Version('4.0.3'):
             url += "/OLD"
         url += "/metis-{0}.tar.gz".format(version)
