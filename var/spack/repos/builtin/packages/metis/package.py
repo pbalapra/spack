@@ -37,7 +37,7 @@ class Metis(Package):
        partitioning schemes."""
 
     homepage = "http://glaros.dtc.umn.edu/gkhome/metis/metis/overview"
-    url      = "http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.1.0.tar.gz"
+    url      = "http://ftp.mcs.anl.gov/pub/petsc/spack-pkgs/metis-5.1.0.tar.gz"
     list_url = "http://glaros.dtc.umn.edu/gkhome/fsroot/sw/metis/OLD"
 
     version('5.1.0', '5465e67079419a69e0116de24fce58fe')

@@ -33,7 +33,7 @@ class Parmetis(CMakePackage):
        computing fill-reducing orderings of sparse matrices."""
 
     homepage = 'http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview'
-    url      = 'http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/parmetis-4.0.3.tar.gz'
+    url      = 'http://ftp.mcs.anl.gov/pub/petsc/spack-pkgs/parmetis-4.0.3.tar.gz'
     list_url = 'http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/OLD'
 
     version('4.0.3', 'f69c479586bf6bb7aff6a9bc0c739628')
